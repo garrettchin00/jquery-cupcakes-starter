@@ -100,7 +100,6 @@ $("#filter").change(function (){
     }else{
         // store the cupcake objects with that tag to a new variable, this is the collection we'll display to the screen
         let filteredCupcakes = cupcakesCollection.filter(cupcake => cupcake.tags.includes(tag));
-        // console.log(filteredCupcakes);
         
         // display the filtered array to the screen
         displayCupcakes(filteredCupcakes);
