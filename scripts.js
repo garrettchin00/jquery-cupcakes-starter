@@ -9,7 +9,14 @@
 let cupcakesCollection = null;
 
 // use get to grab and display the cupcakes in their default order (this endpoint should return all of the cupcakes in  JSON in alphabetical order])
-// TO DO
+$.get("https://6f186305-ab26-4839-b806-380e3560e049.mock.pstmn.io/cupcakes.json", function(data){
+    // display response
+    displayCupcakes(data);
+    console.log(data);
+
+    // add the response to global variable
+    cupcakesCollection = data;
+}, "json");
 
 
 // display sorted in ascending order (this is calling a different endpoint than the original, but you can use the same one or the global variable, we're just writing this as another call to the server so we can see the syntax for this type of call)
