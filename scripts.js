@@ -99,12 +99,13 @@ $("#filter").change(function (){
         $("#zed").prop("disabled", false);
     }else{
         // store the cupcake objects with that tag to a new variable, this is the collection we'll display to the screen
-       // TO DO
+        let filteredCupcakes = cupcakesCollection.filter(cupcake => cupcake.tags.includes(tag));
 
         // display the filtered array to the screen
-        // TO DO
+        displayCupcakes(filteredCupcakes);
 
         // disable the buttons to sort alphabetically for now. We could add this feature for filtered results later
-       // TO DO
+       $("#alpha").prop("disabled", true);
+       $("#zed").prop("disabled", true);
     }
 });
